@@ -1,0 +1,227 @@
+/* start general declarations */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 48px;
+    --white: #fbfbfb;
+    --black: #1f2e3e;
+    --main-color: #2b7b85;
+    font-family: "Petrona", sans-serif;
+
+}
+
+body {
+    background-color: var(--white);
+}
+
+.container {
+    width: min(100%, 1000px);
+    margin: 0 auto;
+}
+
+h1,
+h3 {
+    font-size: 1.5rem;
+}
+
+h1::first-letter,
+h3::first-letter {
+    color: var(--main-color)
+}
+
+/* end general declarations */
+
+/* start styling header */
+header {
+    background-color: var(--white);
+    filter: drop-shadow(0 0 5px #1f2e3e12);
+    -webkit-filter: drop-shadow(0 0 5px #1f2e3e12);
+    padding: 12px;
+    position: sticky;
+    top: 0
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    gap: 10px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    color: var(--main-color)
+}
+
+/* end styling header */
+
+/* start styling hero section */
+.hero-section .container {
+    background-image: radial-gradient(#9cd8e0, #2b7b85, #364553);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: max(1.3rem, 1.7vw);
+    font-weight: bold;
+    padding: 20svh 0
+}
+
+/* end styling hero section */
+
+/* start styling about section */
+.about {
+    padding: 24px 12px
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-contanier-chart {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
+}
+
+.about-contanier-chart .chart {
+    width: 230px;
+    aspect-ratio: 1/1;
+    background-image: conic-gradient(#9cd8e0 20%, #2b7b85 20%, #2b7b85 50%, #1f2e3e 50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.about-contanier-chart .numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-contanier-chart .numbers p {
+    position: relative;
+}
+
+.about-contanier-chart .numbers p::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1/1;
+    left: -25px;
+}
+
+.about-contanier-chart .numbers-one::before {
+    background-color: #9cd8e0;
+}
+
+.about-contanier-chart .numbers-two::before {
+    background-color: #2b7b85;
+}
+
+.about-contanier-chart .numbers-three::before {
+    background-color: #1f2e3e;
+}
+
+@media screen and (max-width: 560px) {
+    .about-contanier-chart {
+        flex-direction: column;
+        gap: 24px
+    }
+
+    .about-contanier-chart .numbers {
+        gap: 12px
+    }
+}
+
+/* end styling about section */
+
+/* start styling contact section */
+.contact {
+    padding: 24px 12px;
+}
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.contact form input {
+    font-size: 1.1rem;
+    padding: 12px;
+    border: 2px solid #d3d6d9;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.contact form input:last-of-type {
+    padding: 12px 12px 72px
+}
+
+.contact form input:focus {
+    outline: 2px solid var(--black);
+    outline-offset: -2px;
+}
+
+.contact form button {
+    width: 150px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    color: var(--white);
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition-duration: .4s;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+@media screen and (min-width:560px) {
+    .contact form button:hover {
+        color: var(--main-color);
+        background-color: var(--white);
+    }
+}
+
+/* end styling contact section */
+
+/* start styling footer */
+footer {
+    background-color: #1f2e3e;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    font-size: 1.2rem;
+}
+
+/* end styling footer */
